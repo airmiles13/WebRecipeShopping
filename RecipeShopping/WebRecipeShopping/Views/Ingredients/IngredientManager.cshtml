@@ -1,0 +1,34 @@
+﻿@model IEnumerable<WebRecipeShopping.Models.Ingredient>
+@{
+    ViewBag.Title = "IngredientManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<p>
+    @Html.ActionLink("Add New Ingredient", "Create")
+</p>*@
+@*<p>
+    @Html.Partial("AddIngredient")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ingredient)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ingredient)
+            </td>
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>*@
+        </tr>
+    }
+
+</table>
